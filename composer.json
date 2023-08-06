@@ -1,0 +1,6 @@
+{
+    "require": {
+        "icewind/smb": "^3.5",
+        "jasny/sso": "^0.4.2"
+    }
+}
