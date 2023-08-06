@@ -71,5 +71,4 @@ class Model extends Database implements Throwable{
             return "Wrong email or password";
         }
     }
-  
 }
