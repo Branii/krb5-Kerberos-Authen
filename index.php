@@ -1,6 +1,9 @@
 <?php 
-include "controller/Controller.php";
-(new Controller)->checkSession();
+ini_set('display_errors',0);
+require "./config/Database.php";
+require "./model/Model.php";
+require "controller/Controller.php";
+(new Controller)->checkSessionSet();
 ?>
 <!doctype html>
 <html lang="en">

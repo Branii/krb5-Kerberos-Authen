@@ -1,5 +1,9 @@
 <?php 
-session_start();
+ini_set('display_errors',0);
+require "./config/Database.php";
+require "./model/Model.php";
+require "controller/Controller.php";
+(new Controller)->checkSessionunSet();
 ?>
 <!doctype html>
 <html lang="en">
@@ -90,9 +94,9 @@ session_start();
     </div>
   </div>
   <div class="text-container">
-    <h3>Sample File (10kb)</h3>
+    <h3>Sample File (5kb)</h3>
     <div>
-      <button class="btn btn-sm ">Open</button>
+      <a href="assets/file.pdf"><button class="btn btn-sm ">Open</button></a>
   </div>
 </div>
 </div>

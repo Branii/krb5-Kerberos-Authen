@@ -32,8 +32,12 @@
             parent::updateOTP($addr,$number);
         }
 
-        public function checkSession() {
-            return parent::checkSession();
+        public function checkSessionSet() {
+            return parent::checkSessionSet();
+        }
+
+        public function checkSessionunSet() {
+            return parent::checkSessionunSet();
         }
 
     } // controller class for routing advance MVC php | very easy to understand

@@ -156,10 +156,17 @@ class Model extends Database implements Throwable{
 
     }
     
-    public function checkSession(){
+    public function checkSessionSet(){
         session_start();
         if(isset($_SESSION['userid'])){
             header("location:home.php");
+        }
+    }
+
+    public function checkSessionunSet(){
+        session_start();
+        if(!isset($_SESSION['userid'])){
+            header("location:index.php");
         }
     }
 
