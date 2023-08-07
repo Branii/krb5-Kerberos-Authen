@@ -1,11 +1,12 @@
 <?php
 
 
-$clientIP = $_SERVER['REMOTE_ADDR'];
-echo "Your IP address is: $clientIP";
-
-$userAgent = $_SERVER['HTTP_USER_AGENT'];
-echo "User Agent: $userAgent";
+$randomNumbers = array_map(
+    function() { return random_int(1, 9); },
+    array_fill(0, 6, null)
+);
+echo implode("",$randomNumbers);
+//print_r($randomNumbers);
 
 // require('vendor/autoload.php');
 

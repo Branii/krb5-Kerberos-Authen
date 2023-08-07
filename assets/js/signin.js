@@ -9,8 +9,7 @@ $(".submit").on("click",function(e){
 
     let postresquery = () => {
         $.post("execute/execute_signin.php",values,(data)=>{
-           alert(data)
-           console.log(data)
+           data == "true" ? window.location.href = "home.php" : alert(data)
         })
     }
 

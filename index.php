@@ -1,4 +1,7 @@
-
+<?php 
+include "controller/Controller.php";
+(new Controller)->checkSession();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,8 +26,7 @@
   
 
   <div class="d-md-flex half">
-    <div class="bg" style="background-image: url('assets/images/bg_1.jpg');"></div>
-   
+    <!-- <div class="bg" style="background-image: url('assets/images/bg_1.jpg');"></div> -->
 
       <div class="container">
         <div class="row align-items-center justify-content-center">
@@ -36,7 +38,7 @@
               </div>
               <form action="#" method="post">
                 <div class="form-group first">
-                  <label for="username">Username</label>
+                  <label for="username">Email Address</label>
                   <input type="text" class="form-control" placeholder="your-email@gmail.com" id="email" autocomplete="off">
                 </div>
                 <div class="form-group last mb-3">
@@ -66,8 +68,6 @@
 
     
   </div>
-    
-   
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
@@ -77,6 +77,7 @@
     <script>
         $(function(){
             $.post("execute/execute_verify.php",(data)=>{
+              console.log(data)
                 data == "true" ?window.location.href = "oauth.php" : "";
             })
         });
