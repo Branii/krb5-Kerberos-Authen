@@ -7,8 +7,8 @@ if (isset($_COOKIE['timer'])) {
 include_once ("../ZenophSMSGH/lib/ZenophSMSGH.php");
 include "../controller/Controller.php";
 $zs = new ZenophSMSGH();
-$zs->setUser('braniiblack@gmail.com');
-$zs->setPassword('123456qwerty');
+$zs->setUser('example@gmail.com');
+$zs->setPassword('1234');
 $zs->setMessageType(ZenophSMSGH_MESSAGETYPE::TEXT);
 $zs->setSenderId('SCHOBY BUS');
 $ipAddress = $_SERVER['REMOTE_ADDR'];
